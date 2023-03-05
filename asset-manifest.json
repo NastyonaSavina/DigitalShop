@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/DigitalShop/static/css/main.47a3a6de.css",
-    "main.js": "/DigitalShop/static/js/main.ecd35cb3.js",
+    "main.js": "/DigitalShop/static/js/main.69d862d4.js",
     "index.html": "/DigitalShop/index.html",
     "main.47a3a6de.css.map": "/DigitalShop/static/css/main.47a3a6de.css.map",
-    "main.ecd35cb3.js.map": "/DigitalShop/static/js/main.ecd35cb3.js.map"
+    "main.69d862d4.js.map": "/DigitalShop/static/js/main.69d862d4.js.map"
   },
   "entrypoints": [
     "static/css/main.47a3a6de.css",
-    "static/js/main.ecd35cb3.js"
+    "static/js/main.69d862d4.js"
   ]
 }
