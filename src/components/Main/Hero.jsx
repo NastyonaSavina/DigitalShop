@@ -6,7 +6,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 export const Hero = () => {
     return (
-         <div style={{ display: 'block', height: 400}}>
+         <div style={{ display: 'block', height: 489}} className=" mb-3 overflow-hidden rounded">
             <Carousel>
                 <Carousel.Item interval={2500}>
                     <img
