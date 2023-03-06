@@ -1,12 +1,19 @@
 import { BsFillBasketFill} from "react-icons/bs";
+import { useDispatch, useSelector } from "react-redux";
+import { selectCartItems, selectIsModalOpen } from "redux/Cart/cart.selectors";
+import { toggleModalAction } from "redux/Cart/cart.slice";
+
+import { ModalLayout } from '../Modal/ModalLayout';
 
 
 export const Header = () => {
+    const isModalOpen = useSelector(selectIsModalOpen); 
+    const cartItems = useSelector(selectCartItems);
+   const dispatch = useDispatch();
 
-    const handleModal = {
-    
-}
-
+  const toggleModal = () => {
+        dispatch(toggleModalAction());
+    };
 
     return (
         <>
@@ -30,13 +37,18 @@ export const Header = () => {
               
                    
                 <div className="d-flex justify-content-end">
-                 <button type="button" className="btn btn-primary position-relative" ata-bs-toggle="modal" data-bs-target="#exampleModal">
+                 <button type="button" className="btn btn-primary position-relative" ata-bs-toggle="modal" data-bs-target="#exampleModal" onClick={toggleModal}>
                     <BsFillBasketFill />
                     <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        99+
+                            {cartItems ? cartItems.length : 0 }
                     </span>
                     </button>
                 </div>
+                {isModalOpen && (
+                    <ModalLayout onClose={toggleModal}>
+                        <p>Please login to place an order</p>
+                    </ModalLayout >)}
+
                 
 
             </header>

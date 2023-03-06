@@ -1,14 +1,16 @@
 
 import { useEffect } from 'react';
 
-export const Modal = ({ children, onClose }) => {
+
+export const ModalLayout = ({ children, onClose }) => {
+     
+
   useEffect(() => {
     const handleKeyClose = event => {
       if (event.code === 'Escape') {
         onClose();
       }
     };
-
     window.addEventListener('keydown', handleKeyClose);
 
     return () => {

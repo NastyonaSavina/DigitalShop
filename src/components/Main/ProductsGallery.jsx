@@ -26,7 +26,7 @@ export const ProductsGallery = () => {
     return (
 
         <>
-            <div className="p-3 d-flex  justify-content-between rounded bg-primary bg-opacity-25 mb-3"  >
+            <div className="p-2 d-flex  justify-content-between  align-items-baseline rounded bg-primary bg-opacity-25 mb-3"  >
                 <div>
                     <button type= "button" className="btn btn-outline-primary position-relative"><VscListSelection /> Catalog </button>
                 </div>
@@ -34,13 +34,13 @@ export const ProductsGallery = () => {
                     <p>sorting by price</p>
                     <button type="button" className="btn btn-outline-primary position-relative"><FcGenericSortingAsc /></button>
                     <button type="button" className="btn btn-outline-primary position-relative"><FcGenericSortingDesc /></button>
-                    <p >sorting by popularity</p>
+                    <p>sorting by popularity</p>
                     <button type="button" className="btn btn-outline-primary position-relative"><AiOutlineStar /></button>
                 </div>
             </div>
        
             {filteredProducts.length === 0 ? (<p>Let's add something here!</p>) : (
-                 <ul className='d-flex flex-wrap grid gap-2 p-0'>
+                 <ul className='d-flex flex-wrap grid gap-3 p-0' style={{marginRight:'auto',marginLeft: 'auto' }}>
                     {filteredProducts.map(product => (
                         <ProductItem key={product.id} product={product} />
                     )               
