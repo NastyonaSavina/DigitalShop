@@ -11,7 +11,7 @@ export const ProductItem = ({ product }) => {
     const { id, productTitle, category, productImg, price, rating } = product;
     const handleAddToCart =()=> {
 
-       dispatch(addItemToCart({ id, productTitle, price }));
+       dispatch(addItemToCart({ id, productTitle, price, productImg }));
     };
 
     return (
