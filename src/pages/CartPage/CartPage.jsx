@@ -37,7 +37,7 @@ const CartPage = () => {
                                 <button className="btn-outline-primary rounded  border border-0" style={{ width: 30 }} >+</button>
                             </div>
                             
-                            <span  className=" m-0 badge bg-primary rounded-pill" style={{ width: 70 }}>{product.price*1}</span>
+                            <span  className="ps-4 m-0 badge bg-primary rounded-pill" style={{ width: 70 }}>{product.price*1}</span>
                         </li>)
                      
             
